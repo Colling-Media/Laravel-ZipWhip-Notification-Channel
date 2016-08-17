@@ -1,0 +1,43 @@
+{
+    "name": "colling-media/laravel-zipwhip-notification-channel",
+    "description": "ZipWhip notifications driver",
+    "keywords": ["laravel", "notifications", "zipwhip", "sms"],
+    "homepage": "https://github.com/Colling-Media/Laravel-ZipWhip-Notification-Channel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Etienne Marais",
+            "email": "hello@etiennemarais.co.za",
+            "homepage": "https://etiennemarais.github.io/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/notifications": "^5.3@dev",
+        "illuminate/support": "^5.3@dev",
+        "illuminate/events": "^5.3@dev",
+        "colling-media/zipwhip-php-api": "*"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\ZipWhip\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\ZipWhip\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "minimum-stability": "dev"
+}
