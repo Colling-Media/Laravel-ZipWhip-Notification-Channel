@@ -15,8 +15,11 @@ class ZipWhipServiceProvider extends ServiceProvider
             ->needs(ZipWhipClient::class)
             ->give(function () {
                 $config = config('services.zipwhip');
-
-                return new ZipWhipClient($config['user'], $config['pass']);
+                if(isset($config['api_key'])) {
+                    return new ZipWhipClient($config['api_key'], null, null);
+                } else {
+                    return new ZipWhipClient(null, $config['user'], $config['pass']);
+                }
             });
     }
 }

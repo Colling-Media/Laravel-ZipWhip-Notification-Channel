@@ -12,18 +12,23 @@ class ZipWhipClient
     const AUTH_FAILED = 1;
 
     /**
-     * @var ClickatellHttp
+     * @var ZipWhipClient
      */
     private $zipwhip;
 
     /**
+     * @param string $api_key
      * @param string $user
      * @param string $pass
-     * @param string $apiId
      */
-    public function __construct($user, $pass)
+    public function __construct($api_key = null, $user = null, $pass = null)
     {
-        $this->zipwhip = new ZipWhipWrapper($user, $pass);
+        if($api_key) {
+            $this->zipwhip = new ZipWhipWrapper($api_key);
+        } else {
+            $this->zipwhip = new ZipWhipWrapper('');
+            $this->zipwhip = $this->zipwhip->authenticate($user, $pass);
+        }
     }
 
     /**
