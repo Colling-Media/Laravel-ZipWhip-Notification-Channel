@@ -37,7 +37,7 @@ class ZipWhipClient
     public function send($to, $message)
     {
         $response = $this->zipwhip->sendMessage($to, $message);
-        $this->handleProviderResponses($response);
+        return $this->handleProviderResponses($response);
     }
 
     /**
