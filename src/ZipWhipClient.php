@@ -3,7 +3,6 @@
 namespace NotificationChannels\ZipWhip;
 
 use NotificationChannels\ZipWhip\Exceptions\CouldNotSendNotification;
-use stdClass;
 use CollingMedia\ZipWhipClient as ZipWhipWrapper;
 
 class ZipWhipClient
@@ -48,7 +47,7 @@ class ZipWhipClient
      * @param array $responses
      * @throws CouldNotSendNotification
      */
-    protected function handleProviderResponses(stdClass $response)
+    protected function handleProviderResponses($response)
     {
         if (!$response) {
             throw CouldNotSendNotification::serviceRespondedWithAnError(
