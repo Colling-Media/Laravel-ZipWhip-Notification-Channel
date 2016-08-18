@@ -36,10 +36,7 @@ class ZipWhipClient
      */
     public function send($to, $message)
     {
-        $to = collect($to)->toArray();
-
         $response = $this->zipwhip->sendMessage($to, $message);
-
         $this->handleProviderResponses($response);
     }
 
@@ -54,6 +51,8 @@ class ZipWhipClient
                 (string) $response->error,
                 '500'
             );
+        } else {
+            return $response;
         }
     }
 
