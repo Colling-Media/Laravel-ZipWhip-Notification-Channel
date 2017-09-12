@@ -13,15 +13,15 @@
         }
     ],
     "require": {
-        "php": ">=5.6.4",
-        "illuminate/notifications": "^5.3",
-        "illuminate/support": "^5.3",
-        "illuminate/events": "^5.3",
+        "php": ">=7.1",
+        "illuminate/notifications": "5.3.*|5.4.*|5.5.*",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*"
         "colling-media/zipwhip-php-api": "*"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.5",
-        "phpunit/phpunit": "4.*"
+        "orchestra/testbench": "3.3.x-dev",
+        "orchestra/database": "3.3.x-dev"
     },
     "autoload": {
         "psr-4": {
@@ -31,6 +31,13 @@
     "autoload-dev": {
         "psr-4": {
             "NotificationChannels\\ZipWhip\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\ZipWhip\\ZipWhipServiceProvider"
+            ]
         }
     },
     "config": {
