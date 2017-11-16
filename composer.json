@@ -15,7 +15,7 @@
     "require": {
         "php": ">=7.1",
         "illuminate/notifications": "5.3.*|5.4.*|5.5.*",
-        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*"
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
         "colling-media/zipwhip-php-api": "*"
     },
     "require-dev": {
