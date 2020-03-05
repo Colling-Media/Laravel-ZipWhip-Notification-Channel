@@ -1,5 +1,5 @@
 {
-    "name": "colling-media/laravel-zipwhip-notification-channel",
+    "name": "darkgoldblade01/laravel-zipwhip-notification-channel",
     "description": "ZipWhip notifications driver",
     "keywords": ["laravel", "notifications", "zipwhip", "sms"],
     "homepage": "https://github.com/Colling-Media/Laravel-ZipWhip-Notification-Channel",
@@ -7,15 +7,15 @@
     "authors": [
         {
             "name": "Brian Logan",
-            "email": "logan@collingmedia.com",
-            "homepage": "https://collingmedia.com/",
+            "email": "me@brianclogan.com",
+            "homepage": "https://darkgoldblade01.com/",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=7.1",
-        "illuminate/notifications": "5.3.*|5.4.*|5.5.*",
-        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+        "illuminate/notifications": "5.3.*|5.4.*|5.5.*|5.6.*",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*",
         "colling-media/zipwhip-php-api": "*"
     },
     "require-dev": {
